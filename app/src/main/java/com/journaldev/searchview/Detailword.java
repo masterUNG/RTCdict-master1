@@ -48,6 +48,10 @@ public class Detailword extends AppCompatActivity {
     }   // Main Method
 
     public void clickBack(View view) {
+
+        MySound mySound = new MySound(Detailword.this, R.raw.effect_btn_long);
+        mySound.playSound();
+
         finish();
     }
 

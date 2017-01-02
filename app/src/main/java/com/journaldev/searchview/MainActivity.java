@@ -74,6 +74,11 @@ public class MainActivity extends AppCompatActivity {
         activityMainBinding.listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                //Play Sound
+                MySound mySound = new MySound(MainActivity.this, R.raw.effect_btn_shut);
+                mySound.playSound();
+
                 Intent intent = new Intent(MainActivity.this, Detailword.class);
 
                 String s = (String) adapterView.getAdapter().getItem(i);
